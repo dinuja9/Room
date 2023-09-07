@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room</title>
-    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="mainpagestyle.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,38 +39,42 @@
                     <a href="#">Login</a>
                 </li>
                 <li>
-                    <button class="get-started">Get Started</button>
+                    <button data-open-modal class="get-started">Get Started</button>
                     <!--Login pop up (modal) code-->
-                    <div class="modal" id="modal">
-                        <div class="close-button">
-                            <button>&times;</button>
+                    <dialog data-modal class="modal">
+                        <div class="close-button-div">
+                            <button data-close-modal class="close-button">&times;</button>
                         </div>    
                         <div class="modal-secondary-login">
                             <div class="login-options">
-                                <a class="google" href="#" role="button"><i class="fa fa-google"></i>Continue with Google</a>
-                                <a class="facebook" href="#" role="button"><i class="fa fa-facebook"></i>Continue with Facebook</a>
-                                <a class="github" href="#" role="button"><i class="fa fa-github"></i>Continue with GitHub</a>
+                                <a class="login google" href="#" role="button"><i class="fa fa-google"></i>Continue with Google</a>
+                                <a class="login facebook" href="#" role="button"><i class="fa fa-facebook"></i>Continue with Facebook</a>
+                                <a class="login github" href="#" role="button"><i class="fa fa-github"></i>Continue with GitHub</a>
                             </div>
+                        </div>
+                        <div>
+                            <span>or</span>
                         </div>
                         <div class="modal-primary-login">
-                            <span>or</span>
-                            <div class="email">Email</div>
-                            <div class="password">Password</div>
-                            <div>
-                                <button class="login">Log in</button>
-                                <a href="#">Reset password</a>
-                                <span>No account?</span>
-                                <a href="#">Create one</a>
-                            </div>
+                            <form action="">
+                                <input class="login form email" type="text" placeholder="Email">
+                                <input class="login form password" type="text" placeholder="Password">
+                            </form>
+                            <button class="login-button">Log in</button>
+                            <a href="#">Reset password</a>
+                                <div>
+                                    <span>No account?</span>
+                                    <a href="#">Create one</a>
+                                </div>
                         </div>
-                    </div>
-                    <div class="overlay"></div>
+                    </dialog>
                 </li>
             </ul>
         </nav>
         <div class="message-container">
             <div class="elipse1"></div>
             <div class="elipse2"></div>
+            <div class="elipse3"></div>
             <div class="rectangle"></div>
             <div class="main-text">
                 <h1>Join us in the next stage</h1> 
