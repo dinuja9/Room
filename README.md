@@ -7,3 +7,5 @@ None of the interactivity has yet to be started:
   - Connecting OAuth for facebook, google and github
   - A log in page for current users
   - Gonna need to mess with AWS for storing files and user information, so databases...
+
+Update: Project is on hold until further notice.
